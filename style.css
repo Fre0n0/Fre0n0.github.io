@@ -27,12 +27,6 @@
     }
 }
 
-#progress-bar-30-years{
-    display: flex;
-    justify-content: center;
-
-}
-
 .mobile-center{
     text-align: center !important;
 }
@@ -89,6 +83,7 @@ nav>img{
 .card-review{
     position: relative;
     width: 320px;
+    /* height: 180px; */
     height: auto;
     background-color: #fff;
     padding: 20px;
@@ -109,7 +104,7 @@ nav>img{
 }
 
 .review-content{
-    color: black;
+    color:black;
 }
 
 .it-solution-cards-container .card{
@@ -119,6 +114,12 @@ nav>img{
     perspective: 1000px;
     background-color: transparent;
     border-color: transparent;
+}
+
+#progress-bar-30-years{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .it-solution-cards-container .front, .it-solution-cards-container .back{
@@ -136,7 +137,7 @@ nav>img{
 }
 
 .it-solution-cards-container .front{
-    background-color: #0c5adb
+    background-color: #0c5adb;
 }
 
 .it-solution-cards-container .back{
@@ -169,8 +170,8 @@ nav>img{
 .readMoreBtn{
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 30px;
     padding-left: 30px;
+    padding-right: 30px;
 }
 
 .join2{
@@ -530,20 +531,20 @@ span.icons>a{
 
 .image-container{
     background: url(images/cn-bg.jpg) center/cover no-repeat;
-    /* height: calc(100vh - var(--header-height)); */
     overflow: hidden;   /* для обрезки содержимого, которое выходит за границы контейнера*/
     overflow-x: hidden;
 }
 
 .image-container .container-fluid, .image-container .row{
-    /* height: calc(500px + var(--header-height)) !important; */
     height: 100vh;
 }
 
+
+
 .testi-bg-img-container{
-    background: url(/10.09.2023/images/testi-bg.jpg) center/cover no-repeat;
-    /* overflow: hidden;   
-    overflow-x: hidden; */
+    background: url(images/testi-bg.jpg) center/cover no-repeat;
+    /*overflow: hidden;    для обрезки содержимого, которое выходит за границы контейнера*/
+    /* overflow-x: hidden; */
 }
 
 .mt-8{
@@ -603,7 +604,7 @@ span.icons>a{
     .mobile-center{
         text-align: start !important;
     }
-    
+
     #progress-bar-30-years{
         justify-content: flex-start;
     }
@@ -611,7 +612,6 @@ span.icons>a{
     .h1-title-solution-image-container{
         font-size: 2.7em;
     }
-    
 }
 
 
