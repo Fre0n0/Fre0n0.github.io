@@ -1,10 +1,15 @@
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .header{
     background-color: rgb(36, 17, 131);
     font-size: large;
 }
 
-.header__icon_color-white,
-.header__text-block_color-white{
+.header__text-block_color-white,
+.color-white{
     color:white
 }
 
@@ -29,8 +34,392 @@
     color: rgb(7, 215, 173) !important;
 }
 
+.header__icon:hover{
+    color: rgb(7, 215, 173);
+    cursor: pointer;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(31, 79, 97, 0);
+}
+
+.slide-2{
+    background: url(images/cargo.jpg) center/cover no-repeat;
+}
+
+.slide-1{
+    background: url(images/ship.jpg) center/cover no-repeat;
+}
+
+.slide-3{
+    background: url(images/truck1.jpg) center/cover no-repeat;
+}
+
+.slide-4{
+    background: url(images/plane1.jpg) center/cover no-repeat;
+}
+
+.slider-container{
+    height: 700px;
+}
+
+.animated-button{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.7s ease, transform 1.7s ease;
+    animation: slideIn 2.5s ease forwards;
+}
+
+.animated-heading-1{
+    opacity: 0;
+    animation: fadeIn1 4s ease forwards;
+}
+
+.animated-heading-2{
+    transition: opacity 4s ease, transform 4s ease;
+    animation: slideIn 5s ease forwards;
+}
+
+.animated-heading-2 span,
+.animated-heading-1 span{
+    /* background-color: rgb(11, 63, 168); */
+    font-size: 50px;
+    color: white;
+}
+
+.animated-heading-3{
+    transition: opacity 3s ease, transform 3s ease;
+    animation: slideIn 4s ease forwards;
+}
+
+@keyframes fadeIn1{
+    from{
+        opacity: 0; /* Начальная непрозрачность (НЕВИДИМО) */
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* .carousel-item__text-block{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    margin-left: 25%;
+} */
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.branded-button{
+    background: none;
+    color: white;
+    width: 16rem;
+    height: 4rem;
+    padding: 0.85em 0.75em;
+    border: 2px solid #0c5adb;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.branded-button::before{
+    content: '';
+    background: #0c5adb;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+    width: 100%;
+    height: 200%;
+    transition: all 0.35s;
+    rotate: 45deg;
+}
+
+.branded-button:hover::before{
+    transform: scale(1.5, 2);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transition: all 0.35s;
+}
+
+.image1{
+    max-width: 100%;
+}
+
+/* rem - кратное размеру шрифта корневого элемента (html)
+1.2rem - в 1.2 раза больше шрифт, установленного в корневом элементе.
+em - относительная единица. Является кратным разным шрифтам родительского  элемента.*/
+p{
+    font-size: 1,2rem;
+}
+
+.service-card{
+    border-style: ridge;
+    transition: all 1s;
+    border-color: whitesmoke;
+    border-bottom-width: 3px;
+    border-bottom-color: #0c5adb;
+    height: 100%;
+}
+
+.carousel-indicators [databstarget]{
+    background-color: #0c5adb;
+}
+
+.service-card__image{
+    width: 100%;
+}
+
+.blue-text-color{
+    color: #0c5adb
+}
+
+.px-50{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.circle{
+    height: 20px;
+    width: 20px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #0c5adb;
+    margin-top: -4.5px;
+
+    animation-name: circleAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circleAnimation {
+    from {
+        margin-left:0px;
+    }
+
+    to {
+        margin-left:160px;
+    }
+}
+
+.line{
+    height: 10px;
+    width: 180px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.image-container-1, .image-container-2{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-repeat: repeat-y;
+    height: auto;
+}
+
+
+.image-container-1{
+    background: url(images/cn-bg.jpg) center/cover no-repeat;  
+}
+
+.image-container-2{
+    position: relative;
+    background: url(images/customs-clearence-services.jpg) center/cover no-repeat;  
+}
+
+.image-container-2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.image-container-1 .container-fluid, .image-container-1 .row{
+    height: auto;
+}
+
+/* .left-col-ic{
+    align-self: flex-end;
+    text-align: center;
+} */
+
+.text-align-justify{
+    text-align: justify;
+}
+
+.advantage-icon{
+    width: 50%;
+}
+
+#display, #display1, #display2, #display3{
+    font-size: 70px;
+}
+
+.achievement-card{
+    z-index: 2;
+}
+
+.record-card{
+    background-color: #0c5adb;
+    clip-path: circle(50% at 50% 50%);
+    height: 87px;
+    width: 87px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.record-card-border{
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 67px;
+    width: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.record-card-border:hover{
+    border: 3px solid #0c5adb;
+    height: 87px;
+    width: 87px;
+    text-align: center;
+}
+
+.triangle{
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: #0c5adb;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+
+.image-container-3{
+    background: url(/Fre0n0.github.io/images/ct_bg.jpg) center/cover no-repeat;
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 600px;
+}
+
+.image-container-4{
+    background-color: whitesmoke;
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 500px;
+}
+
+p{
+    font-size: 115%;
+}
+
+.circle-icon{
+    border-radius: 50%;
+    background-color: #07D7AD;
+    width: 80px;
+    height: 80px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 1s;
+}
+
+.circle-icon i{
+    color: white;
+    font-size: 175%;
+}
+
+.circle-icon:hover{
+    width: 90px;
+    height: 90px;
+
+}
+
+.circle-icon:hover i{
+    color: gray;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.grid-item{
+    padding: 20px;
+}
+
+.grid-container1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.text-size{
+    font-size: 20px;
+    text-decoration: none;
+}
+
 @media (max-width: 768px){
     .logo-image{
         max-width: 60vw;
+    }
+
+    .slider-container{
+        overflow: hidden;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .px-50{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 769px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
     }
 }
