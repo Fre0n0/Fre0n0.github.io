@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/headerStyle.css">
 </head>
 <body>
     <div class="header py-1">
@@ -72,10 +73,10 @@
                         <a class="nav-link text-blue text-center" href="../pages/page1.html">МИТНЕ ОФОРМЛЕННЯ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center" href="#">МИТНИЙ БРОКЕР</a>
+                        <a class="nav-link text-blue text-center" href="../pages/page2.html">МИТНИЙ БРОКЕР</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue text-center" href="#">ЕКСПЕДИЦІЯ</a>
+                        <a class="nav-link text-blue text-center" href="../pages/page3.html">ЕКСПЕДИЦІЯ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-blue text-center" href="#">ПРО НАС</a>
@@ -83,8 +84,21 @@
                     <li class="nav-item">
                         <a class="nav-link text-blue text-center" href="#">КОНТАКТИ</a>
                     </li>
-                    <li class="language-switcher nav-item">
-                        <img src="../images/Flag_of_Ukraine.png" alt="" width="20">
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle dropdown-button" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="ukrainian-flag__icon" src="../images/Flag_of_Ukraine.png" alt="" width="20">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item dropdown-item-icon" href="#"><img class="ukrainian-flag__icon" src="../images/Flag_of_Ukraine.png" alt="" width="20" data-value="ukrainian"></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-item-icon" href="#"><img class="ukrainian-flag__icon" src="../images/Flag_of_the_United_States_(51_stars).svg.png" alt="" width="20" data-value="american"></a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
@@ -94,5 +108,7 @@
             </div>
         </div>
     </nav>
+
+    <!-- <script src="scripts/header.js"></script> -->
 </body>
 </html>
