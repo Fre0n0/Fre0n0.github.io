@@ -10,7 +10,7 @@ html, body{
 
 .header__text-block_color-white,
 .color-white{
-    color:white
+    color:white;
 }
 
 .logo-image{
@@ -159,16 +159,18 @@ html, body{
     transition: all 0.35s;
 }
 
+.branded-button a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .image1{
     max-width: 100%;
 }
 
 /* rem - кратное размеру шрифта корневого элемента (html)
 1.2rem - в 1.2 раза больше шрифт, установленного в корневом элементе.
-em - относительная единица. Является кратным разным шрифтам родительского  элемента.*/
-p{
-    font-size: 1,2rem;
-}
+rem - относительная единица. Является кратным разным шрифтам родительского  элемента.*/
 
 .service-card{
     border-style: ridge;
@@ -188,7 +190,7 @@ p{
 }
 
 .blue-text-color{
-    color: #0c5adb
+    color: #0c5adb;
 }
 
 .px-50{
@@ -271,7 +273,7 @@ p{
     width: 50%;
 }
 
-#display, #display1, #display2, #display3{
+.display, .display1, .display2, .display3{
     font-size: 70px;
 }
 
@@ -397,6 +399,26 @@ p{
 .text-size{
     font-size: 20px;
     text-decoration: none;
+}
+
+.shadow{
+    border: 7px black;
+    border-radius: 10px;
+}
+
+.blue-circle{
+    background: 50px #0c5adb;
+    border-radius: 100%;
+    height: 37px;
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-circle i{
+    color: white;
+    font-size: 125%;
 }
 
 @media (max-width: 768px){
