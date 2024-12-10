@@ -565,10 +565,14 @@ p{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
     }
-    
-    .abous-us-license2{
-        width: 31rem;
+
+    .abous-us-license1, .abous-us-license2{
+        width: 100%;
     }
+    
+    /* .abous-us-license2{
+        width: 31rem;
+    } */
 
     .padding-about-us{
         padding-left: 1rem;
@@ -584,6 +588,9 @@ p{
     .padding-about-us{
         padding-left: 4rem;
         padding-right: 4rem;
+    }
+    .abous-us-license1, .abous-us-license2{
+        width: 100%;
     }
 }
 
