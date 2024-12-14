@@ -331,7 +331,6 @@ rem - относительная единица. Является кратным
     background: url(/Fre0n0.github.io/images/ct_bg.jpg) center/cover no-repeat;
     overflow: hidden;
     overflow-x: hidden;
-    height: 600px;
 }
 
 .image-container-4{
@@ -578,6 +577,10 @@ p{
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    .image-container-4{
+        height: auto;
+    }
 }
 
 @media (max-width: 1440px) and (min-width: 769px){
@@ -591,6 +594,9 @@ p{
     }
     .abous-us-license1, .abous-us-license2{
         width: 100%;
+    }
+    .image-container-4{
+        height: auto;
     }
 }
 
