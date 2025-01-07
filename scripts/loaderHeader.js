@@ -123,7 +123,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     updateContentDisplay(dataValue);
 
-                    selectedLanguage = localStorage.getItem('selectedLanguage')
+                    selectedLanguage = localStorage.getItem('selectedLanguage');
+
+                    const currentPage = window.location.pathname;
+                    alert(currentPage)
+
+                    const titles = {
+                        uk: {
+                            '/index.html': "Найкраща міжнародна логістична компанія AS-Trans Київ, Україна"
+                        },
+                        en: {
+                            '/index.html': "The Best International Logistics Company AS-Trans Kyiv, Ukraine"
+                        }
+                    }
+
+                    document.title = title.en['/index.html']; //HARDCODE! УБРАТЬ!
 
                     const observer = new IntersectionObserver((entries, observer) => {
                         entries.forEach(entry => {
