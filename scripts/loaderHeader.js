@@ -125,9 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     selectedLanguage = localStorage.getItem('selectedLanguage');
 
-                    const currentPage = window.location.pathname;
-                    alert(currentPage)
-
                     const titles = {
                         uk: {
                             '/index.html': "Найкраща міжнародна логістична компанія AS-Trans Київ, Україна"
